@@ -13,7 +13,6 @@ import com.surcumference.fingerprint.network.update.UpdateFactory;
 import com.surcumference.fingerprint.plugin.PluginApp;
 import com.surcumference.fingerprint.plugin.PluginFactory;
 import com.surcumference.fingerprint.plugin.inf.IAppPlugin;
-import com.surcumference.fingerprint.util.Umeng;
 import com.surcumference.fingerprint.util.log.L;
 
 import de.robv.android.xposed.XposedBridge;
@@ -32,7 +31,6 @@ public class TaobaoPlugin {
         try {
             PluginApp.setup(PluginType.Xposed, PluginTarget.Taobao);
             Toaster.init(application);
-            Umeng.init(application);
             UpdateFactory.lazyUpdateWhenActivityAlive();
             IAppPlugin plugin = PluginFactory.loadPlugin(application, Constant.PACKAGE_NAME_TAOBAO);
             com.surcumference.fingerprint.xposed.XposedAppLifecycle.install(plugin);

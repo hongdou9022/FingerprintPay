@@ -78,7 +78,6 @@ dependencies {
     implementation project(":3rdparty:FingerprintIdentify:FingerprintIdentifyLib")
     implementation 'com.google.code.gson:gson:2.14.0'
     implementation 'com.squareup.okhttp3:okhttp:5.5.0'
-    implementation 'com.umeng.analytics:analytics:6.1.2'
     implementation 'androidx.appcompat:appcompat:1.8.0'
     implementation 'com.github.getActivity:EasyHttp:13.8'
     implementation 'com.github.getActivity:Toaster:15.0'

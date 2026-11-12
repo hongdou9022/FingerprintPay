@@ -46,6 +46,3 @@ com.surcumference.fingerprint.plugin.xposed.UnionPayPlugin {
 # 启用激进优化
 -dontusemixedcaseclassnames
 -dontskipnonpubliclibraryclasses
-
-# Preserve legacy analytics bytecode for strict ART verifiers.
--keep class com.umeng.** { *; }
