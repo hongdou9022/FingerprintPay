@@ -13,7 +13,6 @@ import com.surcumference.fingerprint.plugin.PluginFactory;
 import com.surcumference.fingerprint.plugin.inf.IAppPlugin;
 import com.surcumference.fingerprint.util.ApplicationUtils;
 import com.surcumference.fingerprint.util.Task;
-import com.surcumference.fingerprint.util.Umeng;
 import com.surcumference.fingerprint.util.log.L;
 
 /**
@@ -35,7 +34,6 @@ public class UnionPayPlugin {
         Application application = ApplicationUtils.getApplication();
         IAppPlugin plugin = PluginFactory.loadPlugin(application, Constant.PACKAGE_NAME_UNIONPAY);
         Toaster.init(application);
-        Task.onMain(1000, ()-> Umeng.init(application));
 
         UpdateFactory.lazyUpdateWhenActivityAlive();
         PluginFactory.register(application, plugin);

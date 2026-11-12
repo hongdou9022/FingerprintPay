@@ -47,8 +47,6 @@ com.surcumference.fingerprint.plugin.xposed.UnionPayPlugin {
 -dontusemixedcaseclassnames
 -dontskipnonpubliclibraryclasses
 
-# Preserve legacy analytics bytecode for strict ART verifiers.
--keep class com.umeng.** { *; }
 
 # The pinned OkHttp provider adapter installs the in-memory suffix database.
 -keepclassmembers class okhttp3.internal.publicsuffix.PublicSuffixDatabase {

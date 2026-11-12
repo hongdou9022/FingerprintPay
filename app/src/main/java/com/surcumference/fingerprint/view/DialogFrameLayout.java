@@ -30,7 +30,6 @@ import com.surcumference.fingerprint.listener.OnDismissListener;
 import com.surcumference.fingerprint.listener.OnShowListener;
 import com.surcumference.fingerprint.util.DpUtils;
 import com.surcumference.fingerprint.util.StyleUtils;
-import com.surcumference.fingerprint.util.Umeng;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,7 +72,6 @@ public abstract class DialogFrameLayout<T extends DialogFrameLayout> extends Fra
         window.setBackgroundDrawable(dialogWindowBackground());
         mDialog = dialog;
         dialog.show();
-        Umeng.onResume(getContext());
         mDialog = dialog;
         return dialog;
     }
@@ -84,7 +82,6 @@ public abstract class DialogFrameLayout<T extends DialogFrameLayout> extends Fra
         if (listener != null) {
             listener.onDismiss(this);
         }
-        Umeng.onPause(getContext());
     }
 
     @Override
@@ -93,7 +90,6 @@ public abstract class DialogFrameLayout<T extends DialogFrameLayout> extends Fra
         if (listener != null) {
             listener.onShow((T)this);
         }
-        Umeng.onResume(getContext());
     }
 
     public T withOnDismissListener(OnDismissListener listener) {
